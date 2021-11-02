@@ -211,8 +211,8 @@ class OpenShiftOAuthenticator(OAuthenticator):
         auth_state = await user.get_auth_state()
 
         user_info = await self._get_openshift_user_info(auth_state['access_token'])
-        if not user_info:
-            await user.stop()
+        # if not user_info:
+        #     await user.stop()
 
         return user_info
 
